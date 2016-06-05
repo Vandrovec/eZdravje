@@ -5,6 +5,8 @@ var queryUrl = baseUrl + '/query';
 var username = "ois.seminar";
 var password = "ois4fri";
 
+var tabelaPacientov = {};
+
 
 /**
  * Prijava v sistem z privzetim uporabnikom za predmet OIS in pridobitev
@@ -31,8 +33,21 @@ function getSessionId() {
  * @return ehrId generiranega pacienta
  */
 function generirajPodatke(stPacienta) {
-  ehrId = "";
-
+    ehrId = "";
+    switch (stPacienta) {
+        case 1: var novPacient;
+            novPacient.ime = "Karl";
+            novPacient.priimek = "Popper";
+            break;
+        case 2: var novPacient = "Ha-Joon";
+            novPacient.priimek = "Chang";
+            break;
+        case 3: var novPacient = "John"
+            novPacient.priimek = "Coltrane";
+            break;
+        default:
+        ;
+    }
   // TODO: Potrebno implementirati
 
   return ehrId;
