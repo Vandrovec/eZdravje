@@ -32,18 +32,27 @@ function getSessionId() {
  * @param stPacienta zaporedna številka pacienta (1, 2 ali 3)
  * @return ehrId generiranega pacienta
  */
+ 
+function catchForm(){
+    generirajPodatke()
+}
 function generirajPodatke(stPacienta) {
     ehrId = "";
     switch (stPacienta) {
         case 1: var novPacient;
             novPacient.ime = "Karl";
             novPacient.priimek = "Popper";
+            tabelaPacientov[1] = novPacient;
             break;
-        case 2: var novPacient = "Ha-Joon";
+        case 2: var novPacient; 
+            novPacient.ime = "Ha-Joon";
             novPacient.priimek = "Chang";
+            tabelaPacientov[2] = novPacient;
             break;
-        case 3: var novPacient = "John"
+        case 3: var novPacient;
+            novPacient.ime = "John"
             novPacient.priimek = "Coltrane";
+            tabelaPacientov[3] = novPacient;
             break;
         default:
         ;
